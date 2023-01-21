@@ -14,12 +14,20 @@ public class Driver {
 
 
 
-    @OneToOne
-    @JoinColumn
-    private  Cab cab;
+//    @OneToOne
+//    @JoinColumn
+//    private  Cab cab;
+//
+//    // trip +++++
+//    private List<TripBooking> tripBookingList;
 
-    // trip +++++
+
+    @OneToOne(mappedBy = "driver", cascade = CascadeType.ALL)
+    private Cab cab;
+
+    @OneToMany(mappedBy = "driver", cascade = CascadeType.ALL)
     private List<TripBooking> tripBookingList;
+
 
     public Driver() {
     }
