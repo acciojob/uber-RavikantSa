@@ -31,6 +31,10 @@ public class Driver {
 
     public Driver() {
     }
+    public Driver(String mobile, String password) {
+        this.mobile = mobile;
+        this.password = password;
+    }
 
     public Driver(int driverId, String mobile, String password, Cab cab, List<TripBooking> tripBookingList) {
         this.driverId = driverId;
@@ -76,7 +80,8 @@ public class Driver {
         return tripBookingList;
     }
 
-    public void setTripBookingList(List<TripBooking> tripBookingList) {
-        this.tripBookingList = tripBookingList;
+    public void setTripBookings(List<TripBooking> tripBookings) {
+        this.tripBookingList = tripBookings;
     }
+
 }

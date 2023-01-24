@@ -25,6 +25,13 @@ public class TripBooking {
     public TripBooking() {
     }
 
+    public TripBooking(String fromLocation, String toLocation, int distanceInKm, TripStatus status, int bill) {
+        this.fromLocation = fromLocation;
+        this.toLocation = toLocation;
+        this.distanceInKm = distanceInKm;
+        this.status = status;
+        this.bill = bill;
+    }
 
     public TripBooking(int tripBookingId, String fromLocation, String toLocation, int distanceInKm, TripStatus status, int bill) {
         this.tripBookingId = tripBookingId;
@@ -39,6 +46,13 @@ public class TripBooking {
         return driver;
     }
 
+//    public int getTripBookingId() {
+//        return tripBookingId;
+//    }
+//
+//    public void setTripBookingId(int tripBookingId) {
+//        this.tripBookingId = tripBookingId;
+//    }
     public void setDriver(Driver driver) {
         this.driver = driver;
     }
